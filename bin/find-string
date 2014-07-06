@@ -1,0 +1,18 @@
+#!/bin/bash
+E_BADARGS=65
+
+if [ -z "$1" ]
+	then
+  		echo "Usage: `basename $0` string-to-find <optional: path to search>"
+  	exit $E_BADARGS  # No arg? Bail out.
+fi
+if [ -z "$2" ]; then
+	PLACE='.'
+else
+	PLACE=$2
+fi
+
+grep -Hril "$1" $PLACE
+
+
+
