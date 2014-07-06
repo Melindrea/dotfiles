@@ -149,7 +149,7 @@ function prompt_battery() {
     full="$(cat $battery/charge_full)"
     percentage="$(awk "BEGIN {printf \"%.0f%\",(${now}/${full})*100}")"
 
-    output="$c1[$c0$percentage$c1]$c9"
+    output="[$percentage]$c9"
   fi
 
   echo "$output"
@@ -187,7 +187,7 @@ function prompt_command() {
   # misc: [cmd#:hist#]
   # PS1="$PS1$c1[$c0#\#$c1:$c0!\!$c1]$c9"
   # path: [user@host:path]
-  PS1="$PS1$c1[$c0\u@\h$c1:$c0\w$c1]$c9"
+  PS1="$PS1[\u@\h:\w]"
   PS1="$PS1\n"
   # date: [HH:MM:SS]
   PS1="$PS1$c1[$c0$(date +"%H$c1:$c0%M$c1:$c0%S")$c1]$c9"
