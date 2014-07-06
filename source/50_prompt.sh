@@ -141,15 +141,18 @@ function prompt_battery() {
   local battery state output now full percentage
   output=""
   battery="/sys/class/power_supply/BAT1"
-  state="$(cat $battery/status)"
 
-  if [[ "$state" == "Discharging" ]]; then
-    # Only show prompt if the battery is discharging
-    now="$(cat $battery/charge_now)"
-    full="$(cat $battery/charge_full)"
-    percentage="$(awk "BEGIN {printf \"%.0f%\",(${now}/${full})*100}")"
+  if [[ -d "$battery" ]]; then
+    state="$(cat $battery/status)"
 
-    output="[$percentage]$c9"
+    if [[ "$state" == "Discharging" ]]; then
+      # Only show prompt if the battery is discharging
+      now="$(cat $battery/charge_now)"
+      full="$(cat $battery/charge_full)"
+      percentage="$(awk "BEGIN {printf \"%.0f%\",(${now}/${full})*100}")"
+
+      output="[$percentage]$c9"
+    fi
   fi
 
   echo "$output"
