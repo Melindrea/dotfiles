@@ -39,5 +39,6 @@ if (( ${#list[@]} > 0 )); then
   done
 fi
 
+sudo dpkg -i http://www.literatureandlatte.com/scrivenerforlinux/scrivener-1.6.1.1-beta.deb
 echo "Don't forget to install Vagrant: http://vagrantup.com/downloads.html\n"
 echo "Don't forget to install Sublime Text: http://www.sublimetext.com/3\n"
