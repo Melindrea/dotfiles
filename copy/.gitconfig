@@ -1,0 +1,49 @@
+[user]
+    name = Marie Hogebrandt
+    email = iam@mariehogebrandt.se
+[core]
+    autocrlf = false
+    eol = lf
+    whitespace = fix,space-before-tab,tab-in-indent,trailing-space
+    excludesfile = ~/.gitignore_global
+    editor = vim
+[push]
+    default = simple
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
+[color]
+  ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[merge]
+  log = true
+[github]
+    user = Melindrea
+[ghi]
+    token = bc8bae28359457ba61eb4b1e321c202975231640
+[url "git@github.com:"]
+    insteadOf = "gh:"
+    pushInsteadOf = "github:"
+    pushInsteadOf = "git://github.com/"
+[url "git://github.com/"]
+    insteadOf = "github:"
+[url "git@gist.github.com:"]
+    insteadOf = "gst:"
+    pushInsteadOf = "gist:"
+    pushInsteadOf = "git://gist.github.com/"
+[url "git://gist.github.com/"]
+    insteadOf = "gist:"
+[url "git@heroku.com:"]
+    insteadOf = "heroku:"
