@@ -58,6 +58,10 @@ function prompt_git() {
   [[ "$output" ]] || output="$(echo "$status" | awk '/# On branch/ {print $4}')"
   [[ "$output" ]] || output="$(git branch | perl -ne '/^\* (.*)/ && print $1')"
 
+  if [[ "$output" = "(no branch)" ]]; then
+    output="detached HEAD"
+  fi
+
   flags="$(
     echo "$status" | awk 'BEGIN {r=""} \
       /^# Changes to be committed:$/        {r=r "+"}\
