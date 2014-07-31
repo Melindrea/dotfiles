@@ -33,7 +33,6 @@ sudo apt-get -qq dist-upgrade
 
 # Install APT packages.
 packages=(
-  python-software-properties
   build-essential libssl-dev openssl
   python-dev libxml2-dev libxslt1-dev
   apache2 mysql-server
@@ -74,9 +73,9 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &
 wget http://www.literatureandlatte.com/scrivenerforlinux/scrivener-1.7.2.3-amd64.deb &&
   sudo dpkg -i scrivener-1.7.2.3-amd64.deb &&
   rm -f scrivener-1.7.2.3-amd64.deb
-echo "Don't forget to install Vagrant: http://vagrantup.com/downloads.html\n"
-echo "Don't forget to install Sublime Text: http://www.sublimetext.com/3\n"
-echo "Update the editor using: sudo update-alternatives –config editor option: vim.basic or vim\n"
+echo "Don't forget to install Vagrant: http://vagrantup.com/downloads.html"
+echo "Don't forget to install Sublime Text: http://www.sublimetext.com/3"
+echo "Update the editor using: sudo update-alternatives –config editor option: vim.basic or vim"
 
 echo "Cleaning Up" &&
 sudo apt-get -f install &&

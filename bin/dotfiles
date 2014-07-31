@@ -72,7 +72,7 @@ function copy_test() {
 }
 function copy_do() {
   e_success "Copying ~/$1."
-  cp "$2" ~/
+  cp -r "$2" ~/
 }
 
 # Link files.
@@ -133,10 +133,10 @@ fi
 # with recent XCode or CLT)
 if [[ ! "$(type -P git)" && "$(cat /etc/issue 2> /dev/null)" =~ Ubuntu ]]; then
   e_header "Installing Git"
-  apt-get -y install python-software-properties
-  apt-add-repository -y ppa:git-core/ppa
-  apt-get update
-  apt-get -y --allow-unauthenticated install git
+  sudo apt-get -y install python-software-properties
+  sudo apt-add-repository -y ppa:git-core/ppa
+  sudo apt-get update
+  sudo apt-get -y --allow-unauthenticated install git
 fi
 
 # If Git isn't installed by now, something exploded. We gots to quit!
