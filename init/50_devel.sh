@@ -56,3 +56,12 @@ if [[ "$(type -P gem)" ]]; then
   fi
 fi
 
+echo "Don't forget to install Vagrant: http://vagrantup.com/downloads.html"
+echo "Don't forget to install Sublime Text: http://www.sublimetext.com/3"
+echo "Update the editor using: sudo update-alternatives –config editor option: vim.basic or vim"
+
+echo "Cleaning Up" &&
+sudo apt-get -f install &&
+sudo apt-get autoremove &&
+sudo apt-get -y autoclean &&
+sudo apt-get -y clean

@@ -20,10 +20,17 @@ sudo add-apt-repository -y ppa:otto-kesselgulasch/gimp
 # Gnome3 packages
 sudo add-apt-repository -y ppa:gnome3-team/gnome3
 
-#LibDVDCSS
+# LibDVDCSS
 echo 'deb http://download.videolan.org/pub/debian/stable/ /' | sudo tee -a /etc/apt/sources.list.d/libdvdcss.list &&
 echo 'deb-src http://download.videolan.org/pub/debian/stable/ /' | sudo tee -a /etc/apt/sources.list.d/libdvdcss.list &&
 wget -O - http://download.videolan.org/pub/debian/videolan-apt.asc|sudo apt-key add -
+
+# Dropbox
+sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
+sudo sh -c 'echo "deb http://linux.dropbox.com/ubuntu/ $(lsb_release -cs) main" >> /etc/apt/sources.list.d/dropbox.list'
+
+# Ubuntu-Tweak
+sudo add-apt-repository ppa:tualatrix/ppa
 
 # Update APT.
 e_header "Updating APT"
@@ -47,6 +54,9 @@ packages=(
   openjdk-7-jre oracle-java8-installer
   flashplugin-installer
   virt-manager
+  texlive-full
+  dropbox
+  ubuntu-tweak
 )
 
 list=()
@@ -64,8 +74,6 @@ if (( ${#list[@]} > 0 )); then
 fi
 
 # Check if it exists?
-sudo dpkg -i
-
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
   sudo dpkg -i google-chrome-stable_current_amd64.deb &&
   rm -f google-chrome-stable_current_amd64.deb
@@ -73,12 +81,3 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &
 wget http://www.literatureandlatte.com/scrivenerforlinux/scrivener-1.7.2.3-amd64.deb &&
   sudo dpkg -i scrivener-1.7.2.3-amd64.deb &&
   rm -f scrivener-1.7.2.3-amd64.deb
-echo "Don't forget to install Vagrant: http://vagrantup.com/downloads.html"
-echo "Don't forget to install Sublime Text: http://www.sublimetext.com/3"
-echo "Update the editor using: sudo update-alternatives –config editor option: vim.basic or vim"
-
-echo "Cleaning Up" &&
-sudo apt-get -f install &&
-sudo apt-get autoremove &&
-sudo apt-get -y autoclean &&
-sudo apt-get -y clean
