@@ -30,7 +30,7 @@ sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
 sudo sh -c 'echo "deb http://linux.dropbox.com/ubuntu/ $(lsb_release -cs) main" >> /etc/apt/sources.list.d/dropbox.list'
 
 # Ubuntu-Tweak
-sudo add-apt-repository ppa:tualatrix/ppa
+sudo add-apt-repository -y ppa:tualatrix/ppa
 
 # Update APT.
 e_header "Updating APT"
