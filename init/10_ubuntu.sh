@@ -41,7 +41,7 @@ if (( ${#list[@]} > 0 )); then
 fi
 
 # Check if it exists?
-sudo dpkg -i http://www.literatureandlatte.com/scrivenerforlinux/scrivener-1.6.1.1-beta.deb
+sudo dpkg -i http://www.literatureandlatte.com/scrivenerforlinux/scrivener-1.7.2.3-amd64.deb
 echo "Don't forget to install Vagrant: http://vagrantup.com/downloads.html\n"
 echo "Don't forget to install Sublime Text: http://www.sublimetext.com/3\n"
 echo "Update the editor using: sudo update-alternatives –config editor option: vim.basic or vim\n"
