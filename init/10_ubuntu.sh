@@ -91,3 +91,6 @@ wget http://www.literatureandlatte.com/scrivenerforlinux/scrivener-1.7.2.3-amd64
 wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb &&
   sudo dpkg -i vagrant_1.6.3_x86_64.deb &&
   rm -f vagrant_1.6.3_x86_64.deb
+
+# Source Code Pro font
+curl -L https://gist.githubusercontent.com/lucasdavila/3875946/raw/f62c8a26ad6648b00cd379704617d0b61338f59f/install_source_code_pro.sh | sh
