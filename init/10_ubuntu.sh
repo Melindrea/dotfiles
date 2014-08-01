@@ -61,7 +61,7 @@ packages=(
   dropbox python-gpgme
   ubuntu-tweak
   sublime-text-installer
-  conky-all
+  conky-all lm-sensors
 )
 
 list=()
