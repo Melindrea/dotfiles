@@ -21,7 +21,7 @@ sudo add-apt-repository -y ppa:otto-kesselgulasch/gimp
 sudo add-apt-repository -y ppa:gnome3-team/gnome3
 
 # Sublime Text
-sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
 
 # LibDVDCSS
 echo 'deb http://download.videolan.org/pub/debian/stable/ /' | sudo tee -a /etc/apt/sources.list.d/libdvdcss.list &&
