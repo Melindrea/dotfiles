@@ -43,7 +43,7 @@ sudo apt-get -qq dist-upgrade
 
 # Install APT packages.
 packages=(
-  build-essential libssl-dev openssl
+  build-essential libssl-dev openssl sshfs
   python-dev libxml2-dev libxslt1-dev
   apache2 mysql-server
   php5 php5-cli php5-mysql php5-mcrypt php5-xsl php5-curl sqlite php5-sqlite
