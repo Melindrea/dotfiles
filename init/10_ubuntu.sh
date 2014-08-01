@@ -20,6 +20,9 @@ sudo add-apt-repository -y ppa:otto-kesselgulasch/gimp
 # Gnome3 packages
 sudo add-apt-repository -y ppa:gnome3-team/gnome3
 
+# Sublime Text
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+
 # LibDVDCSS
 echo 'deb http://download.videolan.org/pub/debian/stable/ /' | sudo tee -a /etc/apt/sources.list.d/libdvdcss.list &&
 echo 'deb-src http://download.videolan.org/pub/debian/stable/ /' | sudo tee -a /etc/apt/sources.list.d/libdvdcss.list &&
@@ -57,6 +60,7 @@ packages=(
   texlive-full
   dropbox
   ubuntu-tweak
+  sublime-text-installer
 )
 
 list=()
@@ -73,11 +77,17 @@ if (( ${#list[@]} > 0 )); then
   done
 fi
 
-# Check if it exists?
+# Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
   sudo dpkg -i google-chrome-stable_current_amd64.deb &&
   rm -f google-chrome-stable_current_amd64.deb
 
+# Scrivener
 wget http://www.literatureandlatte.com/scrivenerforlinux/scrivener-1.7.2.3-amd64.deb &&
   sudo dpkg -i scrivener-1.7.2.3-amd64.deb &&
   rm -f scrivener-1.7.2.3-amd64.deb
+
+# Vagrant
+wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb &&
+  sudo dpkg -i vagrant_1.6.3_x86_64.deb &&
+  rm -f vagrant_1.6.3_x86_64.deb
