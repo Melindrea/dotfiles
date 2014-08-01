@@ -58,7 +58,7 @@ packages=(
   flashplugin-installer
   virt-manager
   texlive-full
-  dropbox
+  dropbox python-gpgme
   ubuntu-tweak
   sublime-text-installer
 )
