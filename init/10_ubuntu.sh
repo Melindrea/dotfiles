@@ -56,7 +56,7 @@ packages=(
   unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller
   openjdk-7-jre
   flashplugin-installer
-  virt-manager
+  virt-manager qemu-system
   texlive-full
   dropbox python-gpgme
   ubuntu-tweak
