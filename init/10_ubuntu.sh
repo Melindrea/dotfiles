@@ -61,6 +61,7 @@ packages=(
   dropbox python-gpgme
   ubuntu-tweak
   sublime-text-installer
+  conky-all
 )
 
 list=()
