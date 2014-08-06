@@ -31,3 +31,7 @@ function node_ver() {
     echo "Error, $(node --version) installed."
   )
 }
+
+export NVM_DIR="/home/marie/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
