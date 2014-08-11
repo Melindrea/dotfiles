@@ -96,3 +96,6 @@ wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb &&
 
 # Source Code Pro font
 curl -L https://gist.githubusercontent.com/lucasdavila/3875946/raw/f62c8a26ad6648b00cd379704617d0b61338f59f/install_source_code_pro.sh | sh
+
+# Git Autocomplete
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion
