@@ -35,3 +35,6 @@ function node_ver() {
 export NVM_DIR="/home/marie/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+if [ -f ~/.git-completion ]; then
+  . ~/.git-completion
+fi
