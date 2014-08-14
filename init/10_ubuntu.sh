@@ -63,6 +63,7 @@ packages=(
   ubuntu-tweak
   sublime-text-installer
   conky-all lm-sensors
+  filezilla
 )
 
 list=()
