@@ -58,7 +58,7 @@ packages=(
   openjdk-7-jre
   flashplugin-installer
   virt-manager qemu-system
-  texlive-full
+  texlive-full diction wordnet spell pandoc
   dropbox python-gpgme
   ubuntu-tweak
   sublime-text-installer
