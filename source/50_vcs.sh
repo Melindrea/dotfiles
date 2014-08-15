@@ -27,6 +27,10 @@ alias grr='git remote rm'
 alias gcl='git clone'
 alias gcd='git rev-parse 2>/dev/null && cd "./$(git rev-parse --show-cdup)"'
 
+# Deal with merge issues
+function gmt() { git checkout --theirs $1 && git add $1; }
+function gmm() { git checkout --ours $1 && git add $1; }
+
 # Run commands in each subdirectory.
 alias gu-all='eachdir git pull'
 alias gp-all='eachdir git push'
