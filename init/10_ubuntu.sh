@@ -49,7 +49,7 @@ packages=(
   php5 php5-cli php5-mysql php5-mcrypt php5-xsl php5-curl sqlite php5-sqlite
   virtualbox-4.3 dkms
   skype
-  gimp gimp-data gimp-plugin-registry gimp-data-extras
+  gimp gimp-data gimp-plugin-registry gimp-data-extras imagemagick
   vim
   libcurl3 libcurl3-dev
   spotify-client
