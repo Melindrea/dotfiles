@@ -31,6 +31,9 @@ if [[ "$(type -P npm)" ]]; then
   fi
 fi
 
+# Install Keybase
+keybase-installer
+
 # Install Ruby.
 if [[ "$(type -P rbenv)" ]]; then
   versions=(2.1.2)
