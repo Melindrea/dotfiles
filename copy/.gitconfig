@@ -31,8 +31,6 @@
   log = true
 [github]
     user = Melindrea
-[ghi]
-    token = bc8bae28359457ba61eb4b1e321c202975231640
 [url "git@github.com:"]
     insteadOf = "gh:"
     pushInsteadOf = "github:"
